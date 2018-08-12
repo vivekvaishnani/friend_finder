@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FriendFinder</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <!-- Chosen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" id="clsBtn" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <img style="height:150px; width: 150px;" alt="Best Friend" id="bfImage">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+
+  <div class="container">
+
+    <h2>Survey Questions</h2>
+    <hr>
+    <h3>
+      <strong>About You</strong>
+    </h3>
+    <h4>Name (Required)</h4>
+    <input type="text" id="name" class="form-control" required="">
+
+    <h4>Link to Photo Image (Required)</h4>
+    <input type="text" id="photo" class="form-control" required="">
+
+    <hr>
+<label>
+    <h3>
+      <strong>Question 1</strong>
+    </h3>
+    <h4>Michelangelo is the best Ninja Turtle.</h4>
+    <select class="chosen-select" id="q1">
+      <option value="">0-5</option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+  </label> 
+
+  <hr>
+  <label>
+      <h3>
+        <strong>Question 2</strong>
+      </h3>
+      <h4>Beer, not wine.</h4>
+      <select class="chosen-select" id="q2">
+        <option value="">0-5</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+    </label> 
+
+    <hr>
+  <label>
+      <h3>
+        <strong>Question 3</strong>
+      </h3>
+      <h4>Let's ride bikes instead of driving.</h4>
+      <select class="chosen-select" id="q3">
+        <option value="">0-5</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+    </label> 
+
+    <hr>
+  <label>
+      <h3>
+        <strong>Question 4</strong>
+      </h3>
+      <h4>Yay, dogs!</h4>
+      <select class="chosen-select" id="q4">
+        <option value="">0-5</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+    </label> 
+
+    <hr>
+  <label>
+      <h3>
+        <strong>Question 5</strong>
+      </h3>
+      <h4>There's no such thing as too much coffee.</h4>
+      <select class="chosen-select" id="q5">
+        <option value="">0-5</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+    </label> 
+
+    <hr>
+    <label>
+        <h3>
+          <strong>Question 6</strong>
+        </h3>
+        <h4>Mint Chocolate Chip is the best ice cream flavor.</h4>
+        <select class="chosen-select" id="q6">
+          <option value="">0-5</option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </label> 
+    
+      <hr>
+      <label>
+          <h3>
+            <strong>Question 7</strong>
+          </h3>
+          <h4>More Cowbell.</h4>
+          <select class="chosen-select" id="q7">
+            <option value="">0-5</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+        </label> 
+    
+    
+        <hr>
+      <label>
+          <h3>
+            <strong>Question 8</strong>
+          </h3>
+          <h4>Tabs, not spaces.</h4>
+          <select class="chosen-select" id="q8">
+            <option value="">0-5</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+        </label> 
+    
+        <hr>
+      <label>
+          <h3>
+            <strong>Question 9</strong>
+          </h3>
+          <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+          <select class="chosen-select" id="q9">
+            <option value="">0-5</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+        </label> 
+    
+        <hr>
+      <label>
+          <h3>
+            <strong>Question 10</strong>
+          </h3>
+          <h4>You feel more energetic after spending time with a group of people.</h4>
+          <select class="chosen-select" id="q10">
+            <option value="">0-5</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+        </label> 
+
+    <br>
+    <br>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+      <i class="fa fa-check-circle" aria-hidden="true"></i>
+      Submit</button>
+
+    <hr>
+    <!-- This is get API method -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <a href="/api/friends">API Friends List</a> |
+          <a href="#">GitHub Repo</a>
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script type="text/javascript">
+    
+    // Capture the form inputs
+    $("#submit").on("click", function (event) {
+      // It helps to prevent from submitting traditional method of form 
+      event.preventDefault();
+      // Form validation for data is completely filled or not
+      function validateForm() {
+        // console.log("Entered the Validate Form Function");
+        var isValid = true;
+        $(".form-control").each(function () {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+
+        $(".chosen-select").each(function () {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        return isValid;
+      }
+
+      // If all required fields are filled
+      if (validateForm()) {
+        // Create an object for the user"s data
+        var userData = {
+          name: $("#name").val().trim(),
+          photo: $("#photo").val().trim(),
+          scores: [
+            $("#q1").val().trim(),
+            $("#q2").val().trim(),
+            $("#q3").val().trim(),
+            $("#q4").val().trim(),
+            $("#q5").val().trim(),
+            $("#q6").val().trim(),
+            $("#q7").val().trim(),
+            $("#q8").val().trim(),
+            $("#q9").val().trim(),
+            $("#q10").val().trim()
+          ]
+        };
+          // console.log("UserData is if state: "+userData);
+       
+      } else{
+        alert("Please enter the data");
+      }
+      // console.log("UserData is : "+userData);
+
+       // This line is the magic. It"s very similar to the standard ajax function we used.
+      // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+      // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+      // depending on if a tables is available or not.
+    
+    $.post("/api/friends", userData,
+        function(data) {
+          // console.log("Data is"+data);
+        });
+        var currentURL = window.location.origin;
+    // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+    $.ajax({ url: currentURL + "/api/friends", method: "GET" })
+        .then(function(friends) {
+
+        // Here we are logging the URL so we have access to it for troubleshooting
+          console.log("------------------------------------");
+          console.log("URL: " + currentURL + "/api/friends");
+          console.log("------------------------------------");
+
+          // Here we then log the NYTData to console, where it will show up as an object.
+          // console.log(friends);
+         var bF = bestMatchDis(friends);
+          console.log("------------------------------------");
+          showModal(bF);
+        })
+        $("#clsBtn").on("click",function(){
+     alert("oh Hi");
+   });
+    });
+
+    // MAIN LOGIC
+        
+ function bestMatchDis(friends){  
+    // Absolute Value of the Function
+    function absolute(num){
+        var positiveNum = num;
+        if(num<0){
+          positiveNum = num*(-1);
+        } else if(num == 0){
+          positiveNum = 0;
+        } 
+        return positiveNum;
+      };
+var diff = 0;
+// var bFriend ;
+// Getting uservalue
+var userIP = friends[friends.length-1];
+// console.log(userIP.name);
+var scoreFriend = [];
+
+// Loop for getting all Friends except User
+for(var i =0; i<friends.length-1;i++){
+var diff = 0;
+// console.log("Friends["+friends[i].name+"] :"+friends[i].scores);
+// Loop for getting scores of each friend
+    for(var j=0;j<friends[i].scores.length;j++){
+
+      // Getting Each score seperate
+      // console.log("Scores of {"+friends[i].name+"} = "+friends[i].scores[j]);
+      
+       diff+=(absolute((userIP.scores[j])-(friends[i].scores[j])));
+    }
+    // console.log(diff);
+    scoreFriend[i] =diff; 
+};
+console.log("ScoreFriend Array"+scoreFriend);
+
+var temp;
+var tempFriend;
+var bestFriendScore;
+var newFriends;
+for (var i = 0; i <= scoreFriend.length; i++) 
+{
+  for (var j = i+1; j < scoreFriend.length; j++)
+  {
+      if (scoreFriend[i] > scoreFriend[j]) 
+      {
+          temp = scoreFriend[i];
+          scoreFriend[i] = scoreFriend[j];
+          scoreFriend[j] = temp;
+          bestFriendScore = scoreFriend;
+
+          // Sorting Best friend accordingly
+          tempFriend = friends[i];
+          friends[i] = friends[j];
+          friends[j] = tempFriend;
+          newFriends = friends;                    
+      }
+  }
+}
+// console.log(newFriends); 
+// Best Friend Mil Gaya
+console.log(newFriends[0]);
+var bestFriend = newFriends[0];
+  //  alert(bestFriend.name);
+   return bestFriend;
+}
+function showModal(data)
+{
+  var img = 
+   $("#myModal .modal-title").text(data.name);
+   $("#bfImage").attr('src', data.photo);
+   $("#myModal").modal();
+   
+}
+  </script>
+
+</body>
+
+</html>
